@@ -21,3 +21,30 @@ class Carrinho_Compras:
             self.cont += 1
             print(f"{self.cont} -> Nome: {produto.getNome()}, Valor: {produto.getValor()}")
 
+
+    def getLista(self, vetor):
+        return self.lista_compra[vetor]
+    
+
+    def delProduto(self, vetor):
+        self.vetor_lista = vetor - 1
+        self.lista_compra.pop(self.vetor_lista)
+
+
+class Produto:
+
+    def __init__(self, nome, valor):
+        self.nome = nome
+        self.valor = valor
+
+    def getNome(self):
+        return self.nome
+
+    def getValor(self):
+        return self.valor
+
+    def setNome(self, nome):
+        self.nome = nome
+
+    def setValor(self, valor):
+        self.valor = valor
